@@ -1,0 +1,48 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.obsidilith": {
+      "arrays": {
+        "textures": {
+          "Array.texture": [
+            "Texture.grey",
+            "Texture.purple",
+            "Texture.blue",
+            "Texture.red",
+            "Texture.orange"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "query.mod.skill > 0 ? material.shine : material.default"
+        }
+      ],
+      "textures": [
+        "Array.texture[query.mod.skill]"
+      ]
+    },
+    "controller.render.obsidilith_armor": {
+      "geometry": "Geometry.charged",
+      "part_visibility": [
+        { "*": "query.mod.is_powered" }
+      ],
+      "materials": [ { "*": "Material.charged" } ],
+      "textures": [ "Texture.charged" ],
+      "overlay_color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+      },
+      "uv_anim": {
+          "offset": [ "(query.mod.is_powered) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * 0.01 : 0.0",
+                      "(query.mod.is_powered) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * 0.01 : 0.0" ],
+          "scale": [ 1.0, 1.0 ]
+      },
+      "light_color_multiplier": 0.5,
+      "ignore_lighting" : true
+    }
+  }
+}

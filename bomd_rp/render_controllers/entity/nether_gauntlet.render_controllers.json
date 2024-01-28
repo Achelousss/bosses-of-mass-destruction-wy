@@ -1,0 +1,47 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.nether_gauntlet": {
+      "arrays": {
+        "textures": {
+          "Array.texture": [
+            "Texture.default",
+            "Texture.hurt"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.texture[query.mod.skin]"
+      ]
+    },
+    "controller.render.nether_gauntlet_armor": {
+      "geometry": "Geometry.charged",
+      "part_visibility": [
+        {
+          "*": "query.mod.swirl_punch"
+        }
+      ],
+      "materials": [
+        {
+          "*": "Material.charged"
+        }
+      ],
+      "textures": ["Texture.charged"],
+      "uv_anim": {
+        "offset": [
+          "(query.mod.swirl_punch) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * 0.01 : 0.0",
+          "(query.mod.swirl_punch) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * 0.01 : 0.0"
+        ],
+        "scale": [1.0, 1.0]
+      },
+      "light_color_multiplier": 0.5,
+      "ignore_lighting": true
+    }
+  }
+}

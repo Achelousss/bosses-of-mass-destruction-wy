@@ -1,0 +1,173 @@
+{
+  "dy_load_list": [
+    "sounds/music/game/creative/1"
+  ],
+  "player.mltIf.level_up": {
+    "category": "player",
+    "sounds": [
+      "sounds/player/level_up"
+    ]
+  },
+  "player.mltIf.sp_spend": {
+    "category": "player",
+    "sounds": [
+      "sounds/player/sp_spend"
+    ]
+  },
+  "player.mltIf.fart": {
+    "category": "player",
+    "sounds": [
+      "sounds/player/fart"
+    ]
+  },
+  "neutral.mltIf.soul_star": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/neutral/soul_star"
+    ]
+  },
+  "neutral.mltIf.brimstone": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/neutral/brimstone"
+    ]
+  },
+  "hostile.mltIf.comet_prepare": {
+    "category": "hostile",
+    "sounds": [
+      "sounds/hostile/boss/comet_prepare"
+    ]
+  },
+  "hostile.mltIf.comet_shoot": {
+    "category": "hostile",
+    "sounds": [
+      "sounds/hostile/boss/comet_shoot"
+    ]
+  },
+  "hostile.mltIf.missile_prepare": {
+    "category": "hostile",
+    "sounds": [
+      "sounds/hostile/boss/missile_prepare"
+    ]
+  },
+  "hostile.mltIf.missile_shoot": {
+    "category": "hostile",
+    "sounds": [
+      "sounds/hostile/boss/missile_shoot"
+    ]
+  },
+  "hostile.mltIf.minion_rune": {
+    "category": "hostile",
+    "sounds": [
+      "sounds/hostile/boss/minion_rune"
+    ]
+  },
+  "hostile.mltIf.minion_summon": {
+    "category": "hostile",
+    "sounds": [
+      "sounds/hostile/boss/minion_summon"
+    ]
+  },
+  "hostile.mltIf.teleport_prepare": {
+    "category": "hostile",
+    "sounds": [
+      "sounds/hostile/boss/teleport_prepare"
+    ]
+  },
+  "hostile.mltIf.spike_indicator": {
+    "category": "hostile",
+    "sounds": [
+      "sounds/hostile/boss/spike_indicator"
+    ]
+  },
+  "hostile.mltIf.void_blossom_spike": {
+    "category": "hostile",
+    "sounds": [
+      "sounds/hostile/boss/void_blossom_spike"
+    ]
+  },
+  "hostile.mltIf.wave_indicator": {
+    "category": "hostile",
+    "sounds": [
+      "sounds/hostile/boss/wave_indicator"
+    ]
+  },
+  "hostile.mltIf.spore_prepare": {
+    "category": "hostile",
+    "sounds": [
+      "sounds/hostile/boss/spore_prepare"
+    ]
+  },
+  "hostile.mltIf.spore_impact": {
+    "category": "hostile",
+    "sounds": [
+      "sounds/hostile/boss/spore_impact"
+    ]
+  },
+  "hostile.mltIf.void_blossom_burrow": {
+    "category": "hostile",
+    "sounds": [
+      "sounds/hostile/boss/void_blossom_burrow"
+    ]
+  },
+  "hostile.mltIf.petal_blade": {
+    "category": "hostile",
+    "sounds": [
+      "sounds/hostile/boss/petal_blade"
+    ]
+  },
+  "hostile.mltIf.void_blossom_fall": {
+    "category": "hostile",
+    "sounds": [
+      "sounds/hostile/boss/void_blossom_fall"
+    ]
+  },
+  "hostile.mltIf.obsidilith_prepare_attack": {
+    "category": "hostile",
+    "sounds": [
+      "sounds/hostile/boss/obsidilith_prepare_attack"
+    ]
+  },
+  "hostile.mltIf.obsidilith_burst": {
+    "category": "hostile",
+    "sounds": [
+      "sounds/hostile/boss/obsidilith_burst"
+    ]
+  },
+  "hostile.mltIf.gauntlet_cast": {
+    "category": "hostile",
+    "sounds": [
+      "sounds/hostile/boss/gauntlet_cast"
+    ]
+  },
+  "hostile.mltIf.gauntlet_death": {
+    "category": "hostile",
+    "sounds": [
+      "sounds/hostile/boss/gauntlet_death"
+    ]
+  },
+  "hostile.mltIf.gauntlet_hurt": {
+    "category": "hostile",
+    "sounds": [
+      "sounds/hostile/boss/gauntlet_hurt"
+    ]
+  },
+  "hostile.mltIf.gauntlet_idle": {
+    "category": "hostile",
+    "sounds": [
+      "sounds/hostile/boss/gauntlet_idle"
+    ]
+  },
+  "hostile.mltIf.gauntlet_laser_charge": {
+    "category": "hostile",
+    "sounds": [
+      "sounds/hostile/boss/gauntlet_laser_charge"
+    ]
+  },
+  "hostile.mltIf.gauntlet_spin_punch": {
+    "category": "hostile",
+    "sounds": [
+      "sounds/hostile/boss/gauntlet_spin_punch"
+    ]
+  }
+}

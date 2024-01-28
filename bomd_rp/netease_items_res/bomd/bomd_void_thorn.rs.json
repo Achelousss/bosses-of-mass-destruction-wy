@@ -1,0 +1,12 @@
+{
+    "format_version": "1.10",
+    "minecraft:item": {
+        "description": {
+            "identifier": "bomd:void_thorn",
+            "category": "bomd_item"
+        },
+        "components": {
+            "minecraft:icon": "bomd:void_thorn"
+        }
+    }
+}

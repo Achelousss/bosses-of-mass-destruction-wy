@@ -1,0 +1,12 @@
+{
+    "format_version": "1.10",
+    "minecraft:item": {
+        "description": {
+            "identifier": "bomd:soul_star",
+            "category": "bomd_item"
+        },
+        "components": {
+            "minecraft:icon": "bomd:soul_star"
+        }
+    }
+}

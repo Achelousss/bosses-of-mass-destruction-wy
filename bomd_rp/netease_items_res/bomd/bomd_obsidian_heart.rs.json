@@ -1,0 +1,16 @@
+{
+    "format_version": "1.10",
+    "minecraft:item": {
+        "description": {
+            "identifier": "bomd:obsidian_heart",
+            "category": "bomd_item"
+        },
+        "components": {
+            "minecraft:icon": "bomd:obsidian_heart",
+            "netease:frame_anim_in_scene": {
+                "ticks_per_frame": 2,
+                "texture_path": "textures/bomd/items/bomd/obsidian_heart.png"
+            }
+        }
+    }
+}
