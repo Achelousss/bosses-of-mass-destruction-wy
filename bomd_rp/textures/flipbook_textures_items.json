@@ -1,0 +1,8 @@
+[
+  {
+    "flipbook_texture": "textures/bomd/items/bomd/obsidian_heart.png",
+    "atlas_tile": "bomd:obsidian_heart",
+    "ticks_per_frame": 2,
+    "blend_frames": true
+  }
+]

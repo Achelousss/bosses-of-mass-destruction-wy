@@ -1,0 +1,17 @@
+[
+  {
+    "flipbook_texture": "textures/bomd/block/monolith.png",
+    "atlas_tile": "bomd:monolith_block",
+    "ticks_per_frame": 2
+  },
+  {
+    "flipbook_texture": "textures/bomd/block/chiseled_stone_altar_lit.png",
+    "atlas_tile": "bomd:chiseled_stone_altar_lit_up",
+    "ticks_per_frame": 10
+  },
+  {
+    "flipbook_texture": "textures/bomd/block/obsidilith_rune.png",
+    "atlas_tile": "bomd:obsidilith_rune",
+    "ticks_per_frame": 10
+  }
+]
