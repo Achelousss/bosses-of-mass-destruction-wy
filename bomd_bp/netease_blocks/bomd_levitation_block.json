@@ -1,0 +1,74 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "bomd:levitation_block",
+      "register_to_creative_menu": true,
+      "is_experimental": false,
+      "category": "bomd_block"
+    },
+    "components": {
+      "minecraft:destroy_time": {
+        "value": 10
+      },
+      "minecraft:block_light_emission": {
+        "emission": 0
+      },
+      "minecraft:explosion_resistance": {
+        "value": 1200
+      },
+      "minecraft:block_light_absorption": {
+        "value": 0
+      },
+      "minecraft:map_color": {
+        "color": "#4B0082"
+      },
+      "netease:tier": {
+        "digger": "pickaxe",
+        "destroy_special": true,
+        "level": 0
+      },
+      "netease:aabb": {
+        "collision": [
+          {
+            "min": [0.0, 0.0, 0.0],
+            "max": [1.0, 0.12, 1.0]
+          },
+          {
+            "min": [0.12, 0.12, 0.12],
+            "max": [0.88, 0.88, 0.88]
+          }
+        ],
+        "clip": {
+          "min": [0.12, 0.0, 0.12],
+          "max": [0.88, 0.88, 0.88]
+        }
+      },
+      "netease:face_directional": {
+        "type": "direction"
+      },
+      "netease:render_layer": {
+        "value": "alpha"
+      },
+      "netease:solid": {
+        "value": false
+      },
+      "netease:pathable": {
+        "value": false
+      },
+      "netease:block_entity": {
+        "tick": true,
+        "movable": false
+      },
+      "netease:neighborchanged_sendto_script": {
+        "value": true
+      },
+      "netease:listen_block_remove": {
+        "value": true
+      },
+      "netease:custom_tips": {
+        "value": "§7放置后， 在7x7列中给予创造模式飞行"
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "bomd:void_lily",
+      "register_to_creative_menu": true,
+      "is_experimental": false,
+      "category": "bomd_block"
+    },
+    "components": {
+      "minecraft:block_light_emission": {
+        "emission": 1.0
+      },
+      "minecraft:block_light_absorption": {
+        "value": 0
+      },
+      "minecraft:map_color": {
+        "color": "#FFC0CB"
+      },
+      "netease:aabb": {
+        "collision": {
+          "min": [0.0, 0.0, 0.0],
+          "max": [0.0, 0.0, 0.0]
+        },
+        "clip": {
+          "min": [0.3, 0.0, 0.3],
+          "max": [0.7, 0.8, 0.7]
+        }
+      },
+      "netease:face_directional": {
+        "type": "direction"
+      },
+      "netease:render_layer": {
+        "value": "alpha"
+      },
+      "netease:solid": {
+        "value": false
+      },
+      "netease:pathable": {
+        "value": true
+      },
+      "netease:block_entity": {
+        "tick": false,
+        "movable": false
+      },
+      "netease:may_place_on": {
+        "block": [
+          "minecraft:dirt", "minecraft:grass", "minecraft:farmland", "minecraft:grass_path", "minecraft:mycelium",
+          "minecraft:podzol", "minecraft:dirt_with_roots", "minecraft:mud", "minecraft:moss_block"
+        ]
+      },
+      "netease:block_random_offset": {
+        "x_scope": [0.3, 0.7],
+        "z_scope": [0.3, 0.7]
+      },
+      "netease:custom_tips": {
+        "value": "§7花粉引向何方？"
+      }
+    }
+  }
+}

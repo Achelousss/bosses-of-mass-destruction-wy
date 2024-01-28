@@ -1,0 +1,30 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "bomd:spawn_void_blossom_tool",
+      "register_to_creative_menu": false,
+      "is_experimental": false,
+      "category": "bomd_block"
+    },
+    "components": {
+      "minecraft:loot": {
+        "table": ""
+      },
+      "netease:aabb": {
+        "collision": {
+          "min": [0.0, 0.0, 0.0],
+          "max": [0.0, 0.0, 0.0]
+        },
+        "clip": {
+          "min": [0.0, 0.0, 0.0],
+          "max": [0.0, 0.0, 0.0]
+        }
+      },
+      "netease:block_entity": {
+        "tick": true,
+        "movable": false
+      }
+    }
+  }
+}

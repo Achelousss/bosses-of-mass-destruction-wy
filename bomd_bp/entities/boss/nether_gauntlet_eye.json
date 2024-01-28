@@ -1,0 +1,57 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "bomd:nether_gauntlet_eye",
+      "is_spawnable": false,
+      "is_summonable": false,
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:nameable": {
+      },
+      "minecraft:health": {
+        "value": 500,
+        "max": 500
+      },
+      "minecraft:collision_box": {
+        "width": 0.65,
+        "height": 0.65
+      },
+      "minecraft:type_family": {
+        "family": ["monster", "mob", "nether_gauntlet_eye"]
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "block_explosion",
+            "deals_damage": false
+          },
+          {
+            "cause": "entity_explosion",
+            "deals_damage": false
+          },
+          {
+            "cause": "fall",
+            "deals_damage": false
+          },
+          {
+            "cause": "fire",
+            "deals_damage": false
+          }
+        ]
+      },
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+      "minecraft:persistent":{
+      },
+      "minecraft:conditional_bandwidth_optimization": {}
+    },
+    "events": {
+    }
+  }
+}

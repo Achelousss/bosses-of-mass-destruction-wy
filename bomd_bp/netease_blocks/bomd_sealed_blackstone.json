@@ -1,0 +1,46 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "bomd:sealed_blackstone",
+      "register_to_creative_menu": false,
+      "is_experimental": false,
+      "category": "bomd_block"
+    },
+    "components": {
+      "minecraft:loot": {
+        "table": ""
+      },
+      "minecraft:destroy_time": {
+        "value": 3600000
+      },
+      "minecraft:block_light_emission": {
+        "emission": 0
+      },
+      "minecraft:explosion_resistance": {
+        "value": 3600000
+      },
+      "minecraft:block_light_absorption": {
+        "value": 0
+      },
+      "minecraft:map_color": {
+        "color": "#000000"
+      },
+      "netease:aabb": {
+        "collision": [
+          {
+            "min": [0.0, 0.0, 0.0],
+            "max": [1.0, 1.0, 1.0]
+          }
+        ],
+        "clip": {
+            "min": [0.0, 0.0, 0.0],
+            "max": [1.0, 1.0, 1.0]
+        }
+      },
+      "netease:face_directional": {
+        "type": "facing_direction"
+      }
+    }
+  }
+}

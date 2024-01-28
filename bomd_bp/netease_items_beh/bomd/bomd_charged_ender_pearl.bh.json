@@ -1,0 +1,20 @@
+{
+    "format_version": "1.10",
+    "minecraft:item": {
+        "description": {
+            "identifier": "bomd:charged_ender_pearl",
+            "register_to_create_menu": true,
+            "category": "bomd_item"
+        },
+        "components": {
+            "minecraft:max_stack_size": 1,
+            "netease:customtips": {
+                "value": "§7可重复使用并给予\n§7短暂抗性提升在传送之后"
+            },
+            "netease:cooldown": {
+                "category": "charged_ender_pearl",
+                "duration": 10
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "format_version": "1.10",
+    "minecraft:item": {
+        "description": {
+            "identifier": "bomd:crystal_fruit",
+            "register_to_create_menu": true,
+            "category": "bomd_item"
+        },
+        "components": {
+            "minecraft:max_stack_size": 64,
+            "minecraft:food": {
+                "nutrition": 4,
+                "saturation_modifier": "max",
+                "effects": [
+                    {
+                        "name": "regeneration",
+                        "chance": 1.0,
+                        "duration": 15,
+                        "amplifier": 1
+                    },
+                    {
+                        "name": "resistance",
+                        "chance": 1.0,
+                        "duration": 30,
+                        "amplifier": 0
+                    }
+                ]
+            },
+            "minecraft:use_duration": 32,
+            "minecraft:use_animation": "eat",
+            "netease:customtips": {
+                "value": "§7给予短暂的恢复和抵抗"
+            }
+        }
+    }
+}

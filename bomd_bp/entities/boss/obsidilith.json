@@ -1,0 +1,156 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "bomd:obsidilith",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "have_target": {
+        "minecraft:on_target_escape": {
+          "event": "lose_target",
+          "target": "self"
+        },
+        "minecraft:timer": {
+          "looping": true,
+          "time": [1, 2],
+          "randomInterval": true,
+          "time_down_event": {
+            "event": "use_skill",
+            "target": "self"
+          }
+        }
+      },
+      "without_target": {
+        "minecraft:on_target_acquired": {
+          "event": "acquire_target",
+          "target": "self"
+        },
+        "minecraft:timer": {
+          "looping": true,
+          "time": 1,
+          "randomInterval": false,
+          "time_down_event": {
+            "event": "heal",
+            "target": "self"
+          }
+        }
+      }
+    },
+    "components": {
+      "minecraft:experience_reward": {
+        "on_death": "100"
+      },
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": 0
+      },
+      "minecraft:nameable": {
+      },
+      "minecraft:health": {
+        "value": 600,
+        "max": 600
+      },
+      "minecraft:collision_box": {
+        "width": 2,
+        "height": 7
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/obsidilith.json"
+      },
+      "minecraft:type_family": {
+        "family": ["monster", "mob", "obsidilith"]
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "fall",
+            "deals_damage": false
+          },
+          {
+            "cause": "block_explosion",
+            "deals_damage": false
+          },
+          {
+            "cause": "entity_explosion",
+            "deals_damage": false
+          }
+        ]
+      },
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
+      },
+      "minecraft:boss": {
+        "hud_range": 55,
+        "name": "黑曜石之柱",
+        "should_darken_sky": false
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+      "minecraft:behavior.hurt_by_target": {
+        "priority": 1
+      },
+      "minecraft:behavior.nearest_attackable_target": {
+        "priority": 2,
+        "entity_types": [
+          {
+            "filters": {
+              "test": "is_family",
+              "subject": "other",
+              "value": "player"
+            },
+            "max_dist": 64
+          }
+        ],
+        "must_see": false
+      },
+      "minecraft:physics": {
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:persistent": {
+      },
+      "minecraft:conditional_bandwidth_optimization": {}
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "without_target"
+          ]
+        }
+      },
+      "acquire_target": {
+        "add": {
+          "component_groups": [
+            "have_target"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "without_target"
+          ]
+        }
+      },
+      "lose_target": {
+        "add": {
+          "component_groups": [
+            "without_target"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "have_target"
+          ]
+        }
+      },
+      "use_skill": {},
+      "heal": {}
+    }
+  }
+}

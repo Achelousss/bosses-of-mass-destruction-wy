@@ -1,0 +1,23 @@
+{
+    "format_version": "1.10",
+    "minecraft:item": {
+        "description": {
+            "identifier": "bomd:earthdive_spear",
+            "register_to_create_menu": true,
+            "category": "bomd_equip"
+        },
+        "components": {
+            "minecraft:max_stack_size": 1,
+            "netease:weapon": {
+                "type": "sword",
+                "level": 3,
+                "speed": 8,
+                "attack_damage": 8,
+                "enchantment": 15
+            },
+            "netease:customtips": {
+                "value": "§7通过固体方块进行短距离传送\n§c-2.9 攻击速度"
+            }
+        }
+    }
+}

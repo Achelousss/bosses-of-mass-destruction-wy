@@ -1,0 +1,255 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "bomd:nether_gauntlet",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "have_target": {
+        "minecraft:on_target_escape": {
+          "event": "lose_target",
+          "target": "self"
+        },
+        "minecraft:timer": {
+          "looping": true,
+          "time": [4, 5],
+          "randomInterval": true,
+          "time_down_event": {
+            "event": "use_skill",
+            "target": "self"
+          }
+        },
+        "minecraft:movement": {
+          "value": 0.03
+        }
+      },
+      "without_target": {
+        "minecraft:on_target_acquired": {
+          "event": "acquire_target",
+          "target": "self"
+        },
+        "minecraft:timer": {
+          "looping": true,
+          "time": 1,
+          "randomInterval": false,
+          "time_down_event": {
+            "event": "heal",
+            "target": "self"
+          }
+        },
+        "minecraft:movement": {
+          "value": 0.0
+        }
+      },
+      "angry": {
+        "minecraft:behavior.ranged_attack": {
+          "priority": 3,
+          "attack_interval_min": 1.0,
+          "attack_interval_max": 3.0,
+          "attack_radius": 15.0,
+          "attack_radius_min": 8.0
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 2,
+          "entity_types": [
+            {
+              "filters": {
+                "test": "is_family",
+                "subject": "other",
+                "value": "player"
+              },
+              "max_dist": 48
+            }
+          ],
+          "must_see": false
+        }
+      },
+      "dying":{
+        "minecraft:damage_sensor": {
+          //设置伤害屏蔽，防止实体在死后依旧受到伤害
+          "triggers": [
+            {
+              "cause": "all",
+              "deals_damage": false
+            },
+            {
+              "cause": "block_explosion",
+              "deals_damage": false
+            },
+            {
+              "cause": "entity_explosion",
+              "deals_damage": false
+            }
+          ]
+        },
+        "minecraft:type_family": {
+          "family": [ "death" ]
+        }
+      }
+    },
+    "components": {
+      "minecraft:experience_reward": {
+        "on_death": "100"
+      },
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": 0
+      },
+      "minecraft:nameable": {
+      },
+      "minecraft:health": {
+        "value": 500,
+        "max": 500
+      },
+      "minecraft:collision_box": {
+        "width": 0.8,
+        "height": 3
+      },
+      "minecraft:navigation.float": {
+        "can_path_over_water": true
+      },
+      "minecraft:behavior.float_wander": {
+        "priority": 2,
+        "must_reach": true
+      },
+      "minecraft:can_fly": {
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/nether_gauntlet.json"
+      },
+      "minecraft:type_family": {
+        "family": ["monster", "mob", "nether_gauntlet"]
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "block_explosion",
+            "deals_damage": false
+          },
+          {
+            "cause": "entity_explosion",
+            "deals_damage": false
+          },
+          {
+            "cause": "fall",
+            "deals_damage": false
+          },
+          {
+            "cause": "fire",
+            "deals_damage": false
+          },
+          {
+              "on_damage": {
+                "filters": {
+                  "all_of": [
+                    {"test": "has_damage", "value": "fatal"}  //受到致命伤害
+                  ]
+                },
+                "event": "death"
+              },
+            "deals_damage": false
+          }
+        ]
+      },
+      "minecraft:jump.static": {
+      },
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
+      },
+      "minecraft:boss": {
+        "hud_range": 55,
+        "name": "地狱之手",
+        "should_darken_sky": true
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+      "minecraft:behavior.float": {
+        "priority": 0
+      },
+      "minecraft:follow_range": {
+        "value": 128,
+        "max": 128
+      },
+      "minecraft:behavior.hurt_by_target": {
+        "priority": 1
+      },
+      "minecraft:behavior.look_at_target": {
+        "priority": 0
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 6,
+        "look_distance": 8
+      },
+      "minecraft:physics": {
+      },
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:persistent":{
+      },
+      "minecraft:conditional_bandwidth_optimization": {},
+      "minecraft:rideable": {
+        "seat_count": 1,
+        "family_types": [
+          "nether_gauntlet_eye"
+        ],
+        "seats": {
+          "position": [0.0, 1.5, 0.15]
+        }
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "without_target"
+          ]
+        }
+      },
+      "acquire_target": {
+        "add": {
+          "component_groups": [
+            "have_target"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "without_target"
+          ]
+        }
+      },
+      "lose_target": {
+        "add": {
+          "component_groups": [
+            "without_target"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "have_target"
+          ]
+        }
+      },
+      "use_skill": {},
+      "become_angry": {
+        "add": {
+          "component_groups": [
+            "angry"
+          ]
+        }
+      },
+      "death": {
+        "add": {
+          "component_groups": [
+            "dying"
+          ]
+        }
+      }
+    }
+  }
+}
