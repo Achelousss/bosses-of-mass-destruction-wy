@@ -1,0 +1,67 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.night_lich.general": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [
+            "idle"
+          ],
+          "transitions": [
+            {
+              "skill": "query.mod.skill > 0.0"
+            },
+            {
+              "rage_mode": "query.mod.conversion_stage > 0.0"
+            }
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "skill": {
+          "animations": [
+            {
+              "summon_fireball": "query.mod.skill == 1.0"
+            },
+            {
+              "summon_missiles": "query.mod.skill == 2.0"
+            },
+            {
+              "summon_minions": "query.mod.skill == 3.0"
+            },
+            {
+              "teleport": "query.mod.skill == 4.0"
+            },
+            {
+              "teleporting": "query.mod.skill == 5.0"
+            },
+            {
+              "unteleport": "query.mod.skill == 6.0"
+            }
+          ],
+          "transitions": [
+            {
+              "default": "query.mod.skill == 0.0 && query.mod.conversion_stage == 0.0"
+            },
+            {
+              "rage_mode": "query.mod.conversion_stage > 0.0"
+            }
+          ]
+        },
+        "rage_mode": {
+          "animations": [
+            "rage_mode"
+          ],
+          "transitions": [
+            {
+              "default": "query.mod.conversion_stage == 0.0"
+            }
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        }
+      }
+    }
+  }
+}

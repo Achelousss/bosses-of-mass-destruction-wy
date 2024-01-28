@@ -1,0 +1,32 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "bomd:chiseled_stone_altar_lit",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/bomd/block/empty"
+      },
+      "geometry": {
+        "default": "geometry.empty"
+      },
+      "animations": {
+        "particle_1": "animation.custom_block.particle_1",
+        "particle_once_1": "animation.custom_block.particle_once_1"
+      },
+      "scripts": {
+        "animate": [
+          "particle_1",
+          "particle_once_1"
+        ]
+      },
+      "particle_effects": {
+        "particle_1": "bomd:chiseled_stone_altar_lit_2",
+        "particle_once_1": "bomd:chiseled_stone_altar_lit_1"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

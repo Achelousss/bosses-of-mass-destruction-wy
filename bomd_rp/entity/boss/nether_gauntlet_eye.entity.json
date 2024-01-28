@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "bomd:nether_gauntlet_eye",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": ""
+      },
+      "geometry": {
+        "default": "geometry.empty"
+      },
+      "render_controllers": [ "controller.render.item_sprite" ]
+    }
+  }
+}

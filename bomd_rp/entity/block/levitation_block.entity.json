@@ -1,0 +1,26 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "bomd:levitation_block",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/bomd/block/levitation_block"
+      },
+      "geometry": {
+        "default": "geometry.levitation_block"
+      },
+      "animations": {
+        "rotate": "animation.levitation_block.rotate"
+      },
+      "scripts": {
+        "animate": [
+          "rotate"
+        ]
+      },
+      "render_controllers": [ "controller.render.default" ]
+    }
+  }
+}

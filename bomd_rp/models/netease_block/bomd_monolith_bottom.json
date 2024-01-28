@@ -1,0 +1,48 @@
+{
+  "format_version": "1.13.0",
+  "netease:block_geometry": {
+    "description": {
+      "identifier": "bomd:monolith_bottom",
+      "textures": [
+        "bomd:monolith_block"
+      ],
+      "item_texture": "bomd:monolith_item",
+      "use_ao": true,
+      "textures_descriptions": [
+        {"width": 64, "length": 64}
+      ]
+    },
+    "bones": [
+      {
+        "name": "bone",
+        "pivot": [-8, 8, 8],
+        "cubes": [
+          {
+            "origin": [-15.5, 0, 2.5],
+            "size": [15, 4, 11],
+            "uv": {
+              "north": {"uv": [35, 18], "uv_size": [15, 4]},
+              "east": {"uv": [9, 39], "uv_size": [11, 4]},
+              "south": {"uv": [35, 22], "uv_size": [15, 4]},
+              "west": {"uv": [20, 39], "uv_size": [11, 4]},
+              "up": {"uv": [9, 28], "uv_size": [15, 11]},
+              "down": {"uv": [24, 39], "uv_size": [15, -11]}
+            }
+          },
+          {
+            "origin": [-14.5, 4, 3.5],
+            "size": [13, 12, 9],
+            "uv": {
+              "north": {"uv": [0, 16], "uv_size": [13, 12]},
+              "east": {"uv": [26, 16], "uv_size": [9, 12]},
+              "south": {"uv": [13, 16], "uv_size": [13, 12]},
+              "west": {"uv": [0, 44], "uv_size": [9, 12]},
+              "up": {"uv": [43, 46], "uv_size": [13, 9]},
+              "down": {"uv": [35, 18], "uv_size": [13, -9]}
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

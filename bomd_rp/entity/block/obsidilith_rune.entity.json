@@ -1,0 +1,30 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "bomd:obsidilith_rune",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/bomd/block/empty"
+      },
+      "geometry": {
+        "default": "geometry.empty"
+      },
+      "animations": {
+        "particle": "animation.obsidilith_rune.particle"
+      },
+      "scripts": {
+        "initialize": ["variable.rot = 0.0;"],
+        "animate": [
+          "particle"
+        ]
+      },
+      "particle_effects": {
+        "particle": "bomd:obsidilith_rune"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

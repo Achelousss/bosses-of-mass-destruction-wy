@@ -1,0 +1,92 @@
+{
+  "format_version": "1.13.0",
+  "netease:block_geometry": {
+    "description": {
+      "identifier": "bomd:obsidilith_end_frame_filled",
+      "textures": [
+        "bomd:obsidilith_end_frame",
+        "bomd:obsidilith_end_frame_side",
+        "mc:obsidian",
+        "mc:endframe_eye"
+      ],
+      "use_ao": true,
+      "textures_descriptions": [
+        {
+          "width": 16,
+          "length": 16
+        }
+      ]
+    },
+    "bones": [
+      {
+        "name": "bone",
+        "pivot": [-8, 8, 8],
+        "cubes": [
+          {
+            "origin": [-16, 0, 0],
+            "size": [16, 13, 16],
+            "uv": {
+              "north": {
+                "texture": 1,
+                "uv": [0, 3],
+                "uv_size": [16, 13]
+              },
+              "east": {
+                "texture": 1,
+                "uv": [0, 3],
+                "uv_size": [16, 13]
+              },
+              "south": {
+                "texture": 1,
+                "uv": [0, 3],
+                "uv_size": [16, 13]
+              },
+              "west": {
+                "texture": 1,
+                "uv": [0, 3],
+                "uv_size": [16, 13]
+              },
+              "up": {
+                "texture": 0,
+                "uv": [16, 16],
+                "uv_size": [-16, -16]
+              },
+              "down": {
+                "texture": 2,
+                "uv": [16, 16],
+                "uv_size": [-16, -16]
+              }
+            }
+          },
+          {
+            "origin": [-12, 13, 4],
+            "size": [8, 3, 8],
+            "texture": 3,
+            "uv": {
+              "north": {
+                "uv": [4, 0],
+                "uv_size": [8, 3]
+              },
+              "east": {
+                "uv": [4, 0],
+                "uv_size": [8, 3]
+              },
+              "south": {
+                "uv": [4, 0],
+                "uv_size": [8, 3]
+              },
+              "west": {
+                "uv": [4, 0],
+                "uv_size": [8, 3]
+              },
+              "up": {
+                "uv": [12, 12],
+                "uv_size": [-8, -8]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

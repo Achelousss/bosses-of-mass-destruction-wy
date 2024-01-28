@@ -1,0 +1,115 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.nether_gauntlet.general": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [
+            "idle"
+          ],
+          "transitions": [
+            {
+              "punch": "query.mod.punch > 0.0 && query.mod.death == 0.0"
+            },
+            {
+              "swirl_punch": "query.mod.swirl_punch > 0.0 && query.mod.death == 0.0"
+            },
+            {
+              "laser_eye": "query.mod.laser_eye > 0.0 && query.mod.death == 0.0"
+            },
+            {
+              "cast": "query.mod.cast > 0.0 && query.mod.death == 0.0"
+            },
+            {
+              "death": "query.mod.death == 1.0"
+            }
+          ],
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true
+        },
+        "punch": {
+          "animations": [
+            {
+              "punch_start": "query.mod.punch == 1.0"
+            },
+            {
+              "punch_loop": "query.mod.punch == 2.0"
+            },
+            {
+              "punch_stop": "query.mod.punch == 3.0"
+            }
+          ],
+          "transitions": [
+            {
+              "default": "query.mod.punch == 0.0 && query.mod.death == 0.0"
+            },
+            {
+              "death": "query.mod.death == 1.0"
+            }
+          ],
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true
+        },
+        "swirl_punch": {
+          "animations": [
+            "swirl_punch"
+          ],
+          "transitions": [
+            {
+              "default": "query.mod.swirl_punch == 0.0 && query.mod.death == 0.0"
+            },
+            {
+              "death": "query.mod.death == 1.0"
+            }
+          ],
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true
+        },
+        "laser_eye": {
+          "animations": [
+            {
+              "laser_eye_start": "query.mod.laser_eye == 1.0"
+            },
+            {
+              "laser_eye_loop": "query.mod.laser_eye == 2.0"
+            },
+            {
+              "laser_eye_stop": "query.mod.laser_eye == 3.0"
+            }
+          ],
+          "transitions": [
+            {
+              "default": "query.mod.laser_eye == 0.0 && query.mod.death == 0.0"
+            },
+            {
+              "death": "query.mod.death == 1.0"
+            }
+          ],
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true
+        },
+        "cast": {
+          "animations": [
+            "cast"
+          ],
+          "transitions": [
+            {
+              "default": "query.mod.cast == 0.0 && query.mod.death == 0.0"
+            },
+            {
+              "death": "query.mod.death == 1.0"
+            }
+          ],
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true
+        },
+        "death": {
+          "animations": [
+            "death"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "bomd:charged_ender_pearl",
+      "materials": {
+        "default": "ender_pearl"
+      },
+      "textures": {
+        "default": "textures/bomd/items/bomd/charged_ender_pearl.png"
+      },
+      "geometry": {
+        "default": "geometry.item_sprite"
+      },
+      "animations": {
+        "flying": "animation.actor.billboard"
+      },
+      "scripts": {
+        "animate": [
+          "flying"
+        ]
+      },
+      "render_controllers": ["controller.render.item_sprite"]
+    }
+  }
+} 

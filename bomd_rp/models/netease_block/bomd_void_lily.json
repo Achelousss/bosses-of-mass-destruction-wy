@@ -1,0 +1,36 @@
+{
+  "format_version": "1.13.0",
+  "netease:block_geometry": {
+    "description": {
+      "identifier": "bomd:void_lily",
+      "textures": ["bomd:void_lily"],
+      "item_texture": "bomd:void_lily"
+    },
+    "bones": [
+      {
+        "name": "unknown_bone",
+        "pivot": [0, 0, 0],
+        "cubes": [
+          {
+            "origin": [-16, 0, 8],
+            "size": [16, 16, 4],
+            "pivot": [-8, 0, 8],
+            "rotation": [0, -45, 0],
+            "uv": {
+              "north": {"uv": [0, 0], "uv_size": [16, 16]}
+            }
+          },
+          {
+            "origin": [-16, 0, 8],
+            "size": [16, 16, 4],
+            "pivot": [-8, 0, 8],
+            "rotation": [0, 45, 0],
+            "uv": {
+              "north": {"uv": [0, 0], "uv_size": [16, 16]}
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

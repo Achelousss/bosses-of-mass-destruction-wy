@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "bomd:mob_ward_top",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/bomd/block/empty"
+      },
+      "geometry": {
+        "default": "geometry.empty"
+      },
+      "animations": {
+        "particle_1": "animation.custom_block.particle_1"
+      },
+      "scripts": {
+        "animate": [
+          "particle_1"
+        ]
+      },
+      "particle_effects": {
+        "particle_1": "bomd:mob_ward"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

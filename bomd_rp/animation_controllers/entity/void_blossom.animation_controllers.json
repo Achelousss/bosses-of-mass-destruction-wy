@@ -1,0 +1,81 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.void_blossom.general": {
+      "initial_state": "spawn",
+      "states": {
+        "spawn": {
+          "animations": [
+            "spawn"
+          ],
+          "transitions": [
+            {
+              "idle": "query.all_animations_finished"
+            }
+          ]
+        },
+        "idle": {
+          "animations": [
+            "idle"
+          ],
+          "transitions": [
+            {
+              "skill": "query.mod.skill > 0.0"
+            },
+            {
+              "rage_mode": "query.mod.conversion_stage > 0.0"
+            },
+            {
+              "death": "query.mod.death"
+            }
+          ]
+        },
+        "skill": {
+          "animations": [
+            {
+              "spike": "query.mod.skill == 1.0"
+            },
+            {
+              "spike_wave": "query.mod.skill == 2.0"
+            },
+            {
+              "spore": "query.mod.skill == 3.0"
+            },
+            {
+              "leaf_blade": "query.mod.skill == 4.0"
+            }
+          ],
+          "transitions": [
+            {
+              "idle": "query.mod.skill == 0.0"
+            },
+            {
+              "rage_mode": "query.mod.conversion_stage > 0.0"
+            },
+            {
+              "death": "query.mod.death"
+            }
+          ]
+        },
+        "rage_mode": {
+          "animations": [
+            "blossom"
+          ],
+          "transitions": [
+            {
+              "idle": "query.mod.conversion_stage == 0.0"
+            },
+            {
+              "death": "query.mod.death"
+            }
+          ]
+        },
+        "death": {
+          "animations": [
+            "death"
+          ]
+        }
+      }
+    }
+  }
+}

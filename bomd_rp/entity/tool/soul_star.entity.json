@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "bomd:soul_star",
+      "materials": {
+        "default": "eye_of_ender_signal"
+      },
+      "textures": {
+        "default": "textures/bomd/items/bomd/soul_star.png"
+      },
+      "geometry": {
+        "default": "geometry.item_sprite"
+      },
+      "animations": {
+        "flying": "animation.soul_star.billboard"
+      },
+      "scripts": {
+        "animate": [
+          "flying"
+        ]
+      },
+      "particle_effects": {
+        "soul_star": "bomd:soul_star"
+      },
+      "render_controllers": ["controller.render.item_sprite"]
+    }
+  }
+} 

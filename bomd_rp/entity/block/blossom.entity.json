@@ -1,0 +1,33 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "bomd:blossom",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/bomd/block/empty"
+      },
+      "geometry": {
+        "default": "geometry.blossom"
+      },
+      "animations": {
+        "blossom_particle": "animation.void_blossom.blossom_particle"
+      },
+      "scripts": {
+        "initialize": [
+          "variable.offset = 0.0;"
+        ],
+        "animate": [
+          "blossom_particle"
+        ]
+      },
+      "particle_effects": {
+        "particle_1": "bomd:blossom_1",
+        "particle_2": "bomd:blossom_2"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

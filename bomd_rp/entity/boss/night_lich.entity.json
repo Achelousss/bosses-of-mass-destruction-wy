@@ -1,0 +1,65 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "bomd:night_lich",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/bomd/entity/night_lich"
+      },
+      "geometry": {
+        "default": "geometry.night_lich"
+      },
+      "spawn_egg": {
+        "base_color": "#2d3737",
+        "overlay_color": "#3fa7da"
+      },
+      "animations": {
+        "float": "animation.night_lich.float",
+        "skull_float": "animation.night_lich.skull_float",
+        "idle": "animation.night_lich.idle",
+        "book_idle": "animation.night_lich.book_idle",
+        "summon_fireball": "animation.night_lich.summon_fireball",
+        "summon_missiles": "animation.night_lich.summon_missiles",
+        "summon_minions": "animation.night_lich.summon_minions",
+        "teleport": "animation.night_lich.teleport",
+        "teleporting": "animation.night_lich.teleporting",
+        "unteleport": "animation.night_lich.unteleport",
+        "rage_mode": "animation.night_lich.rage_mode",
+        "fly_particle": "animation.night_lich.fly_particle",
+        "ctrl": "controller.animation.night_lich.general"
+      },
+      "scripts": {
+        "animate": [
+          "ctrl",
+          "float",
+          "book_idle",
+          "fly_particle"
+        ]
+      },
+      "particle_effects": {
+        "spawn_phantom_1": "bomd:spawn_phantom_1",
+        "summon_missiles_1": "bomd:summon_missiles_1",
+        "summon_missiles_2": "bomd:summon_missiles_2",
+        "summon_missiles_3": "bomd:summon_missiles_3",
+        "summon_missiles_4": "bomd:summon_missiles_4",
+        "summon_missiles_5": "bomd:summon_missiles_5",
+        "summon_fireball_1": "bomd:summon_fireball_1",
+        "lich_fly": "bomd:lich_fly",
+        "teleport_1": "bomd:teleport_1",
+        "rage_mode_1": "bomd:rage_mode_1"
+      },
+      "sound_effects": {
+        "comet_prepare": "hostile.mltIf.comet_prepare",
+        "comet_shoot": "hostile.mltIf.comet_shoot",
+        "missile_prepare": "hostile.mltIf.missile_prepare",
+        "missile_shoot": "hostile.mltIf.missile_shoot",
+        "minion_rune": "hostile.mltIf.minion_rune",
+        "teleport_prepare": "hostile.mltIf.teleport_prepare"
+      },
+      "render_controllers": [ "controller.render.default" ]
+    }
+  }
+}

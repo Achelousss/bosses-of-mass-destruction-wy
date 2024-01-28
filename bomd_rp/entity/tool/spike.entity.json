@@ -1,0 +1,37 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "bomd:tool_spike",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/bomd/entity/void_blossom_spike"
+      },
+      "geometry": {
+        "default": "geometry.spike"
+      },
+      "animations": {
+        "scale": "animation.tool_spike.scale",
+        "spawn": "animation.tool_spike.spawn",
+        "particle": "animation.tool_spike.particle"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.x_rotation = 5 * math.sin(360 * query.body_x_rotation);",
+          "variable.y_rotation = 5 * math.sin(360 * query.body_y_rotation);"
+        ],
+        "animate": [
+          "scale",
+          "spawn",
+          "particle"
+        ]
+      },
+      "particle_effects": {
+        "wave_indicator_purple": "bomd:wave_indicator_purple"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "bomd:nether_gauntlet",
+      "materials": {
+        "default": "entity_alphatest",
+        "charged": "charged_creeper"
+      },
+      "textures": {
+        "default": "textures/bomd/entity/nether_gauntlet",
+        "hurt": "textures/bomd/entity/nether_gauntlet_hurt",
+        "charged": "textures/bomd/entity/nether_gauntlet_armor"
+      },
+      "geometry": {
+        "default": "geometry.nether_gauntlet",
+        "charged": "geometry.nether_gauntlet_armor"
+      },
+      "spawn_egg": {
+        "base_color": "#1d2021",
+        "overlay_color": "#920f0f"
+      },
+      "animations": {
+        "idle": "animation.nether_gauntlet.idle",
+        "punch_start": "animation.nether_gauntlet.punch_start",
+        "punch_loop": "animation.nether_gauntlet.punch_loop",
+        "punch_stop": "animation.nether_gauntlet.punch_stop",
+        "laser_eye_start": "animation.nether_gauntlet.laser_eye_start",
+        "laser_eye_loop": "animation.nether_gauntlet.laser_eye_loop",
+        "laser_eye_stop": "animation.nether_gauntlet.laser_eye_stop",
+        "swirl_punch": "animation.nether_gauntlet.swirl_punch",
+        "death": "animation.nether_gauntlet.death",
+        "cast": "animation.nether_gauntlet.cast",
+        "ctrl": "controller.animation.nether_gauntlet.general"
+      },
+      "scripts": {
+        "animate": [
+          "ctrl"
+        ]
+      },
+      "particle_effects": {
+        "laser_eye": "bomd:laser_eye"
+      },
+      "render_controllers": [ "controller.render.nether_gauntlet", "controller.render.nether_gauntlet_armor"]
+    }
+  }
+}

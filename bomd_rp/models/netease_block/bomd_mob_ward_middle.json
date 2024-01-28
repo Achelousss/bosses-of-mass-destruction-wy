@@ -1,0 +1,65 @@
+{
+  "format_version": "1.13.0",
+  "netease:block_geometry": {
+    "description": {
+      "identifier": "bomd:mob_ward_middle",
+      "textures": [
+        "bomd:mob_ward_block"
+      ],
+      "item_texture": "bomd:mob_ward_item",
+      "use_ao": true,
+      "textures_descriptions": [
+        {"width": 64, "length": 64}
+      ]
+    },
+    "bones": [
+      {
+        "name": "staff",
+        "pivot": [-8, 8, 8],
+        "cubes": [
+          {
+            "origin": [-8.5, 0, 7.5],
+            "size": [1, 16, 1],
+            "uv": {
+              "north": {"uv": [2, 11], "uv_size": [-1, 16]},
+              "east": {"uv": [3, 11], "uv_size": [-1, 16]},
+              "south": {"uv": [4, 11], "uv_size": [-1, 16]},
+              "west": {"uv": [1, 11], "uv_size": [-1, 16]},
+              "up": {"uv": [2, 10], "uv_size": [-1, 1]},
+              "down": {"uv": [3, 11], "uv_size": [-1, -1]}
+            }
+          },
+          {
+            "origin": [-7.5, 14, 7.5],
+            "size": [1, 2, 1],
+            "uv": {
+              "north": {"uv": [23, 30], "uv_size": [1, 2]},
+              "east": {"uv": [22, 30], "uv_size": [1, 2]},
+              "south": {"uv": [25, 30], "uv_size": [1, 2]},
+              "west": {"uv": [24, 30], "uv_size": [1, 2]},
+              "up": {"uv": [23, 29], "uv_size": [1, 1]},
+              "down": {"uv": [24, 30], "uv_size": [1, -1]}
+            }
+          },
+          {
+            "origin": [-9.5, 15, 7.5],
+            "size": [1, 1, 1],
+            "uv": {
+              "north": {"uv": [27, 27], "uv_size": [1, 1]},
+              "east": {"uv": [26, 27], "uv_size": [1, 1]},
+              "south": {"uv": [29, 27], "uv_size": [1, 1]},
+              "west": {"uv": [28, 27], "uv_size": [1, 1]},
+              "up": {"uv": [27, 26], "uv_size": [1, 1]},
+              "down": {"uv": [28, 27], "uv_size": [1, -1]}
+            }
+          }
+        ]
+      },
+      {
+        "name": "crystal",
+        "parent": "staff",
+        "pivot": [0, 50.7, 0]
+      }
+    ]
+  }
+}

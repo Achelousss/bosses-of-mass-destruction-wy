@@ -1,0 +1,33 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "bomd:void_lily",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/bomd/block/empty"
+      },
+      "geometry": {
+        "default": "geometry.void_lily"
+      },
+      "animations": {
+        "particle": "animation.void_lily.particle"
+      },
+      "scripts": {
+        "initialize": [
+          "variable.offset_x = 0.0;",
+          "variable.offset_z = 0.0;"
+        ],
+        "animate": [
+          "particle"
+        ]
+      },
+      "particle_effects": {
+        "particle": "bomd:void_lily"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

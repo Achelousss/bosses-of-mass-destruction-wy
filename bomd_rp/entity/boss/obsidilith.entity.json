@@ -1,0 +1,43 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "bomd:obsidilith",
+      "materials": {
+        "default": "entity_alphatest",
+        "shine": "entity_emissive_alpha",
+        "charged": "charged_creeper"
+      },
+      "textures": {
+        "grey": "textures/bomd/entity/obsidilith_grey",
+        "purple": "textures/bomd/entity/obsidilith_purple",
+        "blue": "textures/bomd/entity/obsidilith_blue",
+        "red": "textures/bomd/entity/obsidilith_red",
+        "orange": "textures/bomd/entity/obsidilith_orange",
+        "charged": "textures/bomd/entity/obsidilith_armor"
+      },
+      "geometry": {
+        "default": "geometry.obsidilith",
+        "charged": "geometry.obsidilith_armor"
+      },
+      "spawn_egg": {
+        "base_color": "#07050d",
+        "overlay_color": "#574d76"
+      },
+      "animations": {
+        "placeholder": "animation.obsidilith.placeholder",
+        "death": "animation.obsidilith.death",
+        "summon": "animation.obsidilith.summon",
+        "ctrl": "controller.animation.obsidilith.general"
+      },
+      "scripts": {
+        "animate": [
+          "ctrl"
+        ]
+      },
+//      "particle_effects": {
+//      },
+      "render_controllers": ["controller.render.obsidilith", "controller.render.obsidilith_armor"]
+    }
+  }
+}

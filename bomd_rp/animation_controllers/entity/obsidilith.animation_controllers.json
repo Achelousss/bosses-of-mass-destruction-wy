@@ -1,0 +1,25 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.obsidilith.general": {
+      "initial_state": "summon",
+      "states": {
+        "summon": {
+          "animations": [
+            "summon"
+          ],
+          "transitions": [
+            {
+              "placeholder": "query.all_animations_finished"
+            }
+          ]
+        },
+        "placeholder": {
+          "animations": [
+            "placeholder"
+          ]
+        }
+      }
+    }
+  }
+}
